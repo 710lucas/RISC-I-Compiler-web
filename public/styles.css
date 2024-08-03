@@ -1,0 +1,78 @@
+body {
+    font-family: "Fira Mono", monospace;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.container {
+    background: #acacaca0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.file-input-container {
+    margin-bottom: 20px;
+}
+
+.file-input {
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.compile-button {
+    padding: 10px 20px;
+    background-color: #4b79a1;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.compile-button:hover {
+    background-color: #283e51;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+.output {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    height: 200px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+
+.file-preview {
+    width: 90%;
+    height: 50rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
