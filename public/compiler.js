@@ -119,7 +119,7 @@ function compileFile(){
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = window.fileName.replace('.asm', '.bin');
+    a.download = window.fileName.split(".")[0]+'.bin';
     a.click();
 
 }
