@@ -142,29 +142,16 @@ function loadExample(){
 //   Author: 710Lucas
 //=====================================
 
-//Adding FD to register 0
-//FD: print display
-ADD 0xFFFD 0xFF00 0x0000
-
-//Telling bus to print display
-//0xFF000 -> no address lane
-//0xFF000 -> no data lane
-//0x0000  -> control = register[0]
-WBUS 0xFF00 0xFF00 0x0000
-
 //Adding F9 to register 1
 //F9: Display pixel
+//byte 0
 ADD 0xFFF9 0xFF00 0x0001
 
 //Telling bus to add pixel to display
+//byte 6
 WBUS 0xFF00 0xFF00 0x0001
 
-//Telling bus to print the display again
-//this will show the pixel in the coordinates (0,0)
-WBUS 0xFF00 0xFF00 0x0000
-
-
-//I'll write RISC-I in memory, letter by letter
+//I'll write "RISC-I" in memory, letter by letter
 
 //Adding R to register 2
 //R = 0x52 in ACII
@@ -225,12 +212,8 @@ ADD 0xFFFA 0xFF00 0x0003
 //Control: 0x0003
 WBUS 0xFF06 0xFFA0 0x0003
 
-//Telling bus to print the display again
-//this will print the text in the coordinates (0,0)
-WBUS 0xFF00 0xFF00 0x0000
-
-//Jump to byte 120
 STP 0x0000 0x0000 0x0000
+
     `
 
     window.fileContent = example;
