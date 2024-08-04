@@ -239,6 +239,11 @@ STP 0x0000 0x0000 0x0000
     updatePreview(example);
 }
 
+function handleTextUpdate(){
+    const text = document.getElementById('filePreview').value;
+    window.fileContent = text;
+}
+
 function updatePreview(content) {
     const preview = document.getElementById('filePreview');
     preview.textContent = content;
